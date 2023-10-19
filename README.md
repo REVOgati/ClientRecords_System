@@ -9,7 +9,7 @@
 - The system should also send reminder to administrator's calender on expiring subscriptions.
 - Use of HTML ,CSS and Javascript for Frontend and Javascript for backend.
 - Use of APIs to connect frontend page and button to Google Calendar.
-- More Frameworks to be used to improve workability of system.
+- More Frameworks to be used to improve workability of the system.
 
 ## Table of Contents
 
