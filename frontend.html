@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base target="_top">
+  <title>Totality Insurance Entry Form</title>
+  <style>
+    body {
+      background-color: skyblue;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    #header {
+      background-color: darkblue;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      height: 160px;
+    }
+    
+    #form-container {
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    
+    .form-item {
+      width: calc(50% - 10px);
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .form-item label {
+      width: 150px;
+      font-weight: bold;
+    }
+    
+    .form-item input[type="text"],
+    .form-item input[type="number"],
+    .form-item select {
+      flex: 1;
+      padding: 5px;
+    }
+    
+    #submit-button-container {
+      width: 100%;
+      text-align: center;
+    }
+    
+    #submit-button {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: darkblue;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <img src="https://drive.google.com/uc?export=view&id=1kxqDVA_BCU_3hLnGkuGq5931Uno991UG" alt="Company Logo" style="width:auto; height: 90px;">
+    <h1>Totality Insurance Entry Form</h1>
+  </div>
+  <form id="myForm"> 
+  <div id="form-container">
+ 
+     
+      <div class="form-item">
+        <label for="clientname">Client Name:</label>
+        <input type="text" id="clientname" name="clientname">
+      </div>
+      <div class="form-item">
+        <label for="contact">Contact:</label>
+        <input type="text" id="contact" name="contact">
+      </div>
+      <div class="form-item">
+        <label for="certnumber">Cert Number:</label>
+        <input type="text" id="certnumber" name="certnumber">
+      </div>
+      <div class="form-item">
+        <label for="vehiclereg">Vehicle Registration:</label>
+        <input type="text" id="vehiclereg" name="vehiclereg">
+      </div>
+      <div class="form-item">
+        <label for="policynumber">Policy Number:</label>
+        <input type="text" id="policynumber" name="policynumber">
+      </div>
+      <div class="form-item">
+        <label for="commdate">Comm Date:</label>
+        <input type="date" id="commdate" name="commdate">
+      </div>
+      
+      
+
+      <div class="form-item">
+        <label for="package">Package:</label>
+        <select id="package" name="package">
+          <option value="TPO-MONTHLY">TPO-MONTHLY</option>
+          <option value="TPO-ANNUAL">TPO-ANNUAL</option>
+          <option value="TP,Fire and Theft">TP, Fire and Theft</option>
+          <option value="COMPREHENSIVE">COMPREHENSIVE</option>
+          <option value="6 MONTHS">6 MONTHS</option>
+        </select>
+      </div>
+      <div class="form-item">
+        <label for="expdate">Exp Date:</label>
+        <input type="date" id="expdate" name="expdate">
+      </div>
+      <div class="form-item">
+        <label for="premium">Premium:</label>
+        <input type="number" id="premium" name="premium">
+      </div>
+      <div class="form-item">
+        <label for="vehicletype">Vehicle Type:</label>
+        <select id="vehicletype" name="vehicletype">
+          <option value="PRIVATE">PRIVATE</option>
+          <option value="COMMERCIAL">COMMERCIAL</option>
+          <option value="PSV">PSV</option>
+          <option value="MOTORCYCLE">MOTORCYCLE</option>
+        </select>
+      </div>
+      <div class="form-item">
+        <label for="amountpaid">Amount Paid:</label>
+        <input type="number" id="amountpaid" name="amountpaid">
+      </div>
+      
+      <div id="submit-button-container">
+        <button type="submit" id="submit-button" onclick="submitForm()">Submit</button>
+      </div>
+    
+  </div>
+  </form>
+  <script>
+    function submitForm() {
+      event.preventDefault();
+      var contactInput = document.getElementById('contact');
+      var inputValue = contactInput.value.trim();
+
+    if (inputValue.startsWith('07')) {
+    contactInput.value = '0' + inputValue;
+    }
+      google.script.run.withSuccessHandler(function() {
+        alert('Data submitted successfully.');
+        google.script.run.createCalendarReminders(); // Create calendar reminders after submitting the form
+      }).processForm(document.getElementById('myForm'));
+      document.getElementById('myForm').reset();
+    }
+  </script>
+</body>
+</html>
