@@ -1,4 +1,5 @@
 # Building a System to store records of Clients for an Insurance Agency.
+# Involves AUTOMATION - as it records data to database, it sends reminders to google calendar based on the expiry dates of client's subscription.
 
 
     # Brief description of project
