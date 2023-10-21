@@ -15,7 +15,14 @@
 
 ## Table of Contents
 
-- [Installation](#installation)
+ *  frontend.html ; This file has :
+        - HTML code used to build user-interface for data input.
+        - CSS code for designing the web page
+        - Javascript code responsible for responsiveness on the frontend side.
+
+ *  backend.js ; This file has :
+ 		- Javascript code that sends the input data to the google sheets for storage
+ 		- Javascript code to send reminder to Google calendar based on the column 'expiryDate' directly from data input at user-interface , i.e AUTOMATION
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
