@@ -44,8 +44,12 @@
 
 * Any changes have to be approved.
 * One can branch the project and perform necessary manipulations, then submit commit and push requests.
+* You are welcome to contribute on the objective set in the next topic below - "Intended Next Phase".
 
+## Intended Next Phase
+ * They system creates a file with records. Next phase would be to intergrate the googlesheets with Tableau that creates specified visualizations using live incoming data.
 
+ * 
 ## License
 
 This project is licensed under the [License Name](LICENSE). N/B : This Licence part is currently a placeholder. Though, it makes the README look beautiful.
