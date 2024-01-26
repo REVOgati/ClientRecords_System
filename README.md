@@ -8,10 +8,10 @@
 - In the front end, a client's data is input .
 - This data is then sent to get stored in database. - Database is Google Sheets as it does not involve numerous entries nor intensive data manipulation.
 
-- The system should also send reminder to administrator's calender on expiring subscriptions based on the column on expirydate.
+- The system also automatically sends a reminder to administrator's calender on expiring subscriptions based on the column on expirydate.
 - Use of HTML ,CSS and Javascript for Frontend and Javascript for backend.
 - Use of APIs to connect frontend page and button to Google Calendar.
-- More Frameworks to be used to improve workability of the system.
+- System workability tested and is being actively used today.
 
 ## Table of Contents
 
@@ -30,8 +30,7 @@
 ## Setup
 
  * The system is implemented over a Web Browser.
- * Currently, the preferred Web browser is "Phoenix" as use of "Chrome" has issues.
- * Open link with Phoenix Browser. Thereafter, you can set a shortcut to Mobile homepage or desktop for PC users. This ensures ease of access
+ * Open link with Phoenix Browser. Thereafter, you can set a shortcut to Mobile homepage or desktop for PC users. This ensures ease of access to web page by system users.
 
 ## Usage
 
